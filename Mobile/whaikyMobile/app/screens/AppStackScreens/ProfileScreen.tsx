@@ -38,7 +38,8 @@ const ProfileScreen = ({ navigation }: RouterProps) => {
       <Button title='Become a Contractor' onPress={()=>navigation.navigate('complete')} />
       {userData && (
         <View>
-          <Image source={ userData.photoURL } style={{ width: 100, height: 100 }}/>
+          <Image source={{ uri: userData.photoURL }} style={{ width: 100, height: 100 }} />
+
           
           <Text>Email: {userData.email || 'N/A'}</Text>
           <Text>UID: {userData.uid || 'N/A'}</Text>

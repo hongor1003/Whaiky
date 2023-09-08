@@ -21,7 +21,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.hongor0611.whaikyMobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -34,6 +38,14 @@
         }
       ],
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8594f8db-ada2-4f02-9b58-03e3628a0dcb"
+      }
+    }
   }
 }

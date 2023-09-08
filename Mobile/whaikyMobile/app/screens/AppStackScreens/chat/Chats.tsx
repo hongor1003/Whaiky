@@ -27,7 +27,7 @@ const Chats: React.FC = () => {
       const unsub = onSnapshot(doc(firestore, "userChats", currentUser!.uid!), (doc) => {
         setChats(doc.data() as Record<string, UserChat> || {});
       });
-
+      console.log('Chats screen rendered');
       return () => {
         unsub();
       };

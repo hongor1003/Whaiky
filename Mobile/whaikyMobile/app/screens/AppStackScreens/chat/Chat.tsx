@@ -14,7 +14,10 @@ const Chat: React.FC = ({navigation,route}:any) => {
       <Button title="Go Back" onPress={() => navigation.goBack()} />
       <View style={styles.chatInfo}>
         <Text style={styles.chatDisplayName}>{userInfo.displayName} </Text>
-        <View style={styles.chatIcons}> <Image source={userInfo.photoURL} style={{ width: 50, height: 50, borderRadius: 25 }} /></View>
+        <View style={styles.chatIcons}>
+          <Image source={{ uri: userInfo.photoURL }} style={{ width: 50, height: 50, borderRadius: 25 }} />
+        </View>
+
       </View>
         <Messages/>
         <Input />
